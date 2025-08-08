@@ -1,213 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>
-		Friend Name
-	</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
-	 <embed src='hi2.mp3' loop="true" autostart="true" width="2" height="0" hidden="true" allow="autoplay">
-	  <style type="text/css">
-	  	@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
-body{
-	background-color:black;
-	margin:0px;
-}
-h1 {
-   font-size: calc(20px + 18vh);
-   line-height: calc(30px + 22vh);
-/* text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
-  color: #fccaff; */
-   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-   color: #fff6a9;
-   font-family: "Sacramento", cursive;
-   text-align: center;
-   animation: blink 5s infinite;
-  -webkit-animation: blink 5s infinite;
-}
-
-.Happy {
-  padding 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #222;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 7px,
-    rgba(0, 0, 0, 0.8) 9px,
-    rgba(0, 0, 0, 0.8) 13px,
-    transparent 13px
-  );
-}
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💖</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: url('background_pic.png') no-repeat center center/cover; /* Change to your image */
+    position: relative;
+  }
+  h1 {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
+  }
+  .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  #yesBtn {
+    background-color: #4CAF50;
+    color: white;
+    left: 55%; /* start slightly to right */
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+  #noBtn {
+    background-color: #f44336;
+    color: white;
+    left: 70%;
+    top: 60%;
+    transform: translate(-50%, -50%);
   }
 
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
+  /* Floating hearts animation */
+  .heart {
+    position: absolute;
+    bottom: -50px;
+    color: rgba(255, 0, 100, 0.7);
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    z-index: 1;
   }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(1.5);
+      opacity: 0;
+    }
   }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  }
-}
-.pic{
-	background-color:#222;
-	background-image: repeating-linear-gradient(
-	    to bottom,
-	    transparent 7px,
-	    rgba(0, 0, 0, 0.8) 9px,
-	    rgba(0, 0, 0, 0.8) 13px,
-	    transparent 13px
-	  );
-	max-width:100%;
-	height: 900px;
-	
-}
-.main {
-  display: flex;
-  overflow: hidden;
-  height: 50vw;
-  background: #333;
-  max-width:80%;
-  margin-left:10%;
-  height:700px;
-  border:10px solid #fff6a9;
-  box-shadow:  0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-}
- 
-.main img {
-  width:20vw;
-  height:310px; 
-  vertical-align: middle;
-  border: 2px solid white;
-  box-sizing: border-box;
-  transition: opacity .2s;
-}
- 
-.main:hover img {
-  opacity: 0.5;
-}
- 
-.main img:hover {
-  opacity: 1;
-}
- 
-.main .single-column {
-	animation:slide 16s infinite linear;
-}
- 
-.main .single-column:hover {
-	animation-play-state: paused;
-}
- 
-.main .single-column:nth-of-type(odd) {
-  align-self: flex-end;
-  --direction: 40%;
-}
- 
-@keyframes slide {
-  to {
-    -webkit-transform: translateY(var(--direction, -50%));
-            transform: translateY(var(--direction, -50%));
-  }
-}
-
-@media screen and (max-width:550px){
-	h1{
-		font-size:70px;
-		line-height:15vh;
-	}
-
-	.main{
-		border:3px solid #fff6a9;
-		max-width:90%;
-		margin-left:5%;
-		height:70vh;
-	}
-	.main img{
-		width:22vw;
-		border:1px solid white;
-		height:200px;
-	}
-	
- 	.main .single-column:nth-of-type(odd) {
-  align-self: flex-end;
-  --direction: 35%;
-}
-	
-}
-
-	  </style>
+</style>
 </head>
 <body>
-<div class="Happy">
-	<h1>Happy Birthday <br> 
-             Friend Name
-	</h1>
-</div>
-<div class="pic">
-   <div class="main">
-	 <div class="single-column">
-		<a href="#"><img src="pic1.jpg" alt="image"></a>
-		<a href="#"><img src="pic3.jpg" alt="image"></a>
-		<a href="#"><img src="pic2.jpg" alt="image"></a>
-		<a href="#"><img src="pic4.jpg" alt="image"></a>
-	</div>
-	<div class="single-column">
-		<a href="#"><img src="pic5.jpg" alt="image"></a>
-		<a href="#"><img src="pic6.jpg" alt="image"></a>
-		<a href="#"><img src="pic7.jpg" alt="image"></a>
-		<a href="#"><img src="pic8.jpg" alt="image"></a>
-	</div>
-	<div class="single-column">
-		<a href="#"><img src="pic9.jpg" alt="image"></a>
-		<a href="#"><img src="pic10.jpg" alt="image"></a>
-		<a href="#"><img src="pic11.jpg" alt="image"></a>
-		<a href="#"><img src="pic12.jpg" alt="image"></a>
-	</div>
-	<div class="single-column">
-		<a href="#"><img src="pic13.jpg" alt="image"></a>
-		<a href="#"><img src="pic14.jpg" alt="image"></a>
-		<a href="#"><img src="pic15.jpg" alt="image"></a>
-		<a href="#"><img src="pic16.jpg" alt="image"></a>
-	</div>
-    </div>
-</div>
+
+<!-- Background music (home page) -->
+<audio id="bgMusic" autoplay loop>
+  <source src="hi2.mp3" type="audio/mpeg">
+</audio>
+
+<h1>听说今天是某人的生日噢？不知某人赏脸与在下一起过吗？ 👀</h1>
+
+<button id="yesBtn" class="btn">Yes 💖</button>
+<button id="noBtn" class="btn">No 👻</button>
+
+<script>
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+  const bgMusic = document.getElementById("bgMusic");
+
+  let noSize = 1;
+  let yesSize = 1;
+  const minNoSize = 0.4;
+  let firstNoClick = true;
+
+  noBtn.addEventListener("click", () => {
+    if (noSize > minNoSize) {
+      noSize -= 0.1;
+      noBtn.style.transform = `scale(${noSize}) translate(-50%, -50%)`;
+
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+
+      yesSize += 0.5;
+      if (firstNoClick) {
+        yesBtn.style.left = "75%"; // move to right so it won't block background center
+        firstNoClick = false;
+      }
+      yesBtn.style.top = "60%";
+      yesBtn.style.transform = `scale(${yesSize}) translate(-50%, -50%)`;
+    } else {
+      noBtn.style.display = "none";
+    }
+  });
+
+  yesBtn.addEventListener("click", () => {
+  bgMusic.pause();
+  bgMusic.src = "birthdaysong.mp3";
+  bgMusic.loop = true;
+
+  // Try playing after setting source — browsers will allow this inside click
+  bgMusic.play().catch(err => {
+    console.log("Playback prevented:", err);
+  });
+
+  document.body.innerHTML = `
+    <h1 style="color:white; text-align:center; font-size:2.5rem; margin-top:10%;">
+      🎉 Happy Birthday, 晓燕小姐! 🎂💖
+    </h1>
+    <p style="color:white;font-size:1.5rem;text-align:center;">
+      祝你生日快乐，愿你每天都像今天一样快乐，笑口常开！(这里可没有拒绝的选择噢 hehe（✿◠‿◠)
+    </p>
+  `;
+});
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    heart.innerHTML = "💖";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+  setInterval(createHeart, 300);
+</script>
+
 </body>
 </html>
