@@ -75,7 +75,10 @@
   <source src="hi2.mp3" type="audio/mpeg">
 </audio>
 
-<h1>听说今天是某人的生日噢？不知某人赏脸与在下一起过吗？ 👀</h1>
+<h1>听说今天是某人的生日噢？不知某人赏脸与在下一起过吗？👀</h1>
+<p style="font-size: 30px; color: pink; font-style: italic;">
+（那个每次欺负我的人类 哼😤)
+</p>
 
 <button id="yesBtn" class="btn">Yes 💖</button>
 <button id="noBtn" class="btn">No 👻</button>
@@ -113,15 +116,23 @@
   });
 
   yesBtn.addEventListener("click", () => {
+  // 1. Pause the current music
   bgMusic.pause();
+
+  // 2. Set up a listener that will play the song ONLY when it's ready
+  // { once: true } is a great practice here; it removes the event listener
+  // after it runs once, preventing it from firing again accidentally.
+  bgMusic.addEventListener('canplaythrough', () => {
+    bgMusic.play().catch(err => {
+      console.log("Playback prevented:", err);
+    });
+  }, { once: true });
+
+  // 3. NOW, change the source and set loop. This triggers the loading process.
   bgMusic.src = "birthdaysong.mp3";
   bgMusic.loop = true;
-
-  // Try playing after setting source — browsers will allow this inside click
-  bgMusic.play().catch(err => {
-    console.log("Playback prevented:", err);
-  });
-
+  
+  // 4. Update the page content
   document.body.innerHTML = `
     <h1 style="color:white; text-align:center; font-size:2.5rem; margin-top:10%;">
       🎉 Happy Birthday, 张晓燕小姐! 🎂💖
